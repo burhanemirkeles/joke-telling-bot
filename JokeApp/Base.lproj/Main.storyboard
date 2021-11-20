@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fvn-JQ-urK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--JokeBot - your funny bot-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JokeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6S-QQ-Q8K">
+                                <rect key="frame" x="20" y="802" width="374" height="60"/>
+                                <color key="backgroundColor" red="0.19525837900000001" green="0.83957821129999999" blue="0.80785071850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ge1-HT-uhJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="jZH-JY-Svm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="ukh-bF-xEc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Tell me a joke!"/>
+                                <connections>
+                                    <action selector="GetJoke" destination="BYZ-38-t0r" eventType="touchUpInside" id="DK3-G2-zdE"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bot" translatesAutoresizingMaskIntoConstraints="NO" id="5sh-bk-LwB">
+                                <rect key="frame" x="20" y="173" width="374" height="380"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxL-Fh-eMn">
+                                <rect key="frame" x="20" y="558" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH5-O7-GLP">
+                                <rect key="frame" x="20" y="587" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat" translatesAutoresizingMaskIntoConstraints="NO" id="GAg-VE-g1l">
+                                <rect key="frame" x="274" y="173" width="120" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="aSp-OV-7TG"/>
+                                    <constraint firstAttribute="width" constant="120" id="yoI-Qr-LrF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PxL-Fh-eMn" secondAttribute="trailing" id="4CU-1R-vyS"/>
+                            <constraint firstItem="rH5-O7-GLP" firstAttribute="top" secondItem="PxL-Fh-eMn" secondAttribute="bottom" constant="8" id="7NB-eF-6Gy"/>
+                            <constraint firstItem="H6S-QQ-Q8K" firstAttribute="centerX" secondItem="5sh-bk-LwB" secondAttribute="centerX" id="ALo-tv-hE8"/>
+                            <constraint firstItem="5sh-bk-LwB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BKO-7y-VUs"/>
+                            <constraint firstItem="H6S-QQ-Q8K" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="D9r-Pw-9QS"/>
+                            <constraint firstItem="PxL-Fh-eMn" firstAttribute="top" secondItem="5sh-bk-LwB" secondAttribute="bottom" constant="5" id="DGO-HO-5zH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5sh-bk-LwB" secondAttribute="trailing" constant="20" id="Dxt-nF-thj"/>
+                            <constraint firstItem="5sh-bk-LwB" firstAttribute="top" secondItem="GAg-VE-g1l" secondAttribute="bottom" constant="-110" id="FeA-Rv-vgd"/>
+                            <constraint firstItem="5sh-bk-LwB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="GMg-Ly-TpU"/>
+                            <constraint firstItem="PxL-Fh-eMn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="L0n-D1-Ajz"/>
+                            <constraint firstItem="rH5-O7-GLP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TBG-2m-Bpy"/>
+                            <constraint firstItem="GAg-VE-g1l" firstAttribute="leading" secondItem="5sh-bk-LwB" secondAttribute="trailing" constant="-120" id="XJP-oe-2K7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rH5-O7-GLP" secondAttribute="trailing" constant="20" id="wtk-Vj-Jky"/>
+                            <constraint firstItem="PxL-Fh-eMn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xUU-7V-IHH"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="JokeBot - your funny bot" id="jIC-FS-mEr"/>
+                    <connections>
+                        <outlet property="botImage" destination="5sh-bk-LwB" id="y5n-s0-4Yx"/>
+                        <outlet property="button" destination="H6S-QQ-Q8K" id="SIn-s0-erb"/>
+                        <outlet property="chatCloud" destination="GAg-VE-g1l" id="Idj-Ey-s4S"/>
+                        <outlet property="punchline" destination="rH5-O7-GLP" id="B6u-k5-qLO"/>
+                        <outlet property="setup" destination="PxL-Fh-eMn" id="upx-0u-0Fi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sEr-KN-IBP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fvn-JQ-urK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Epa-cC-hWF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EnG-vD-H9v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yy4-Li-IoK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bot" width="512" height="512"/>
+        <image name="chat" width="512" height="512"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
