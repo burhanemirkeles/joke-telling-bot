@@ -44,8 +44,8 @@ class ViewController: UIViewController {
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-                self?.punchline.text = joke.punchline
-                self?.sayByBot(joke.punchline)
+                self?.punchline.text = joke.delivery
+                self?.sayByBot(joke.delivery)
                 self?.button.isUserInteractionEnabled = true
             })
         }

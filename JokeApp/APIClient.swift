@@ -8,13 +8,18 @@
 import Foundation
 
 struct APIClient {
-    let url = URL(string: "https://official-joke-api.appspot.com/jokes/random")
+    let urlModel = UrlModel()
     let session = URLSession.shared
     
     func fetchJoke(completion: @escaping (_ joke: Joke?) -> Void) {
-        let request = URLRequest(url: url!)
+        let request = NSMutableURLRequest(url: NSURL(string: urlModel.urlString)! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+      
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = urlModel.headers
         
-        let dataTask = session.dataTask(with: request, completionHandler: { data, response, error in
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
             guard let data = data else {
                 completion(nil)
                 return
