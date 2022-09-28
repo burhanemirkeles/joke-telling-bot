@@ -15,7 +15,9 @@
 		2DFA2D7026C6DE8D00CD724A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA2D6F26C6DE8D00CD724A /* Assets.xcassets */; };
 		2DFA2D7326C6DE8D00CD724A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA2D7126C6DE8D00CD724A /* LaunchScreen.storyboard */; };
 		2DFA2D7B26C6E60600CD724A /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA2D7A26C6E60600CD724A /* Joke.swift */; };
+		7558C09728E47C76005C325B /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558C09628E47C76005C325B /* CustomNavBar.swift */; };
 		756FE0F328C8BC9F00623E5C /* urlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756FE0F228C8BC9F00623E5C /* urlModel.swift */; };
+		75E5C60528E479A0006E56BF /* CustomNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E5C60428E479A0006E56BF /* CustomNavBar.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,9 @@
 		2DFA2D7226C6DE8D00CD724A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DFA2D7426C6DE8D00CD724A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DFA2D7A26C6E60600CD724A /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		7558C09628E47C76005C325B /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		756FE0F228C8BC9F00623E5C /* urlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urlModel.swift; sourceTree = "<group>"; };
+		75E5C60428E479A0006E56BF /* CustomNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavBar.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				2DFA2D6F26C6DE8D00CD724A /* Assets.xcassets */,
 				2DFA2D7126C6DE8D00CD724A /* LaunchScreen.storyboard */,
 				2DFA2D7426C6DE8D00CD724A /* Info.plist */,
+				75E5C60428E479A0006E56BF /* CustomNavBar.xib */,
+				7558C09628E47C76005C325B /* CustomNavBar.swift */,
 			);
 			path = JokeApp;
 			sourceTree = "<group>";
@@ -135,6 +141,7 @@
 			files = (
 				2DFA2D7326C6DE8D00CD724A /* LaunchScreen.storyboard in Resources */,
 				2DFA2D7026C6DE8D00CD724A /* Assets.xcassets in Resources */,
+				75E5C60528E479A0006E56BF /* CustomNavBar.xib in Resources */,
 				2DFA2D6E26C6DE8B00CD724A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +159,7 @@
 				2DDBD0FB26C76DBA00E06959 /* APIClient.swift in Sources */,
 				2DFA2D6926C6DE8A00CD724A /* SceneDelegate.swift in Sources */,
 				756FE0F328C8BC9F00623E5C /* urlModel.swift in Sources */,
+				7558C09728E47C76005C325B /* CustomNavBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
