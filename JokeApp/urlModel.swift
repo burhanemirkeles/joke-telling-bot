@@ -8,9 +8,9 @@
 import Foundation
 
 struct UrlModel{
-    let urlString = "https://jokeapi-v2.p.rapidapi.com/joke/Any?format=json&idRange=0-150&flags=nsfw,racist,sexist,explicit"
+    let urlString = "https://jokeapi-v2.p.rapidapi.com/joke/Dark?format=json&idRange=0-150"
     let headers = [
-        "X-RapidAPI-Key"    :   ApiKeyModel.init().apiKey,
+        "X-RapidAPI-Key"    :   "your_api_key",
         "X-RapidAPI-Host"   :   "jokeapi-v2.p.rapidapi.com"
     ]
 }
